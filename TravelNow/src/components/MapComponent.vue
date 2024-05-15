@@ -1,5 +1,8 @@
 <template>
-  <div id="map" class="mt-3 ml-3 mr-3" style="height: 500px;"></div>
+ <div class="flex justify-center">
+  <div id="map" class="w-1/2 p-4 mt-3" style="height: 500px;"></div>
+</div>
+
 </template>
 
 <script>
