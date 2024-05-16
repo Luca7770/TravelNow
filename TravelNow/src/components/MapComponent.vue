@@ -6,13 +6,12 @@
 </template>
 
 <script>
-import { ref, defineComponent, onMounted, watch } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-export default defineComponent({
+export default {
   props: ['locations'],
-  name: 'MapComponent',
   setup(props) {
     const map = ref(null);
 
@@ -52,16 +51,9 @@ export default defineComponent({
           addMarkers(newLocations);
         }
       },
-      { deep: true }
     );
 
     return {};
   }
-});
+};
 </script>
-
-<style scoped>
-#map {
-  height: 100vh;
-}
-</style>

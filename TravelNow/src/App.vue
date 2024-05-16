@@ -3,7 +3,6 @@
   <Location @add-location="fetchLocationData" />
   <MapComponent :locations="locations"/>
   <LocationList :locations="locations" @remove-location="removeLocation"/>
-  <FooterL/>
   </div>
 </template>
 
@@ -12,16 +11,13 @@ import { ref } from 'vue';
 import Location from './components/Location.vue';
 import MapComponent from './components/MapComponent.vue';
 import LocationList from './components/LocationList.vue';
-import FooterL from './components/FooterL.vue';
 import axios from 'axios';
 
 export default {
-  name: 'App',
   components: {
     Location,
     MapComponent,
     LocationList,
-    FooterL
   },
   setup(){
     const locations = ref([]);
